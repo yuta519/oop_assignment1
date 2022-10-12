@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Wedge {
+    /* write code here */
+    public static void main(String[] args) {
+        Scanner stdin = new Scanner(System.in);
+
+        System.out.println("Enter the initial number of @'s ");
+        String input = stdin.nextLine();
+        System.out.println(String.format("You entered: %s", input));
+
+        try{
+            int number = Integer.parseInt(input);
+            for (int i = number; i > 0; i--) {
+                System.out.println("@".repeat(i)) ;
+            }
+        }
+        catch (NumberFormatException ex){
+            System.out.println("Please input int.");
+        }
+        stdin.close();
+    }
+}
